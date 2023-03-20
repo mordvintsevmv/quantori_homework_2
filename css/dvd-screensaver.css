@@ -1,0 +1,46 @@
+.screen-wrapper {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #373F42;
+}
+
+.dvd-logo {
+  position: absolute;
+  width: 200px;
+  height: 101.875px;
+  filter: invert(92%) sepia(19%) saturate(3755%) hue-rotate(355deg) brightness(98%) contrast(95%);
+}
+@media screen and (orientation: landscape) {
+  .dvd-logo {
+    -webkit-animation: dvd-bounce-horizontal 3.5s linear 0s infinite alternate, dvd-bounce-vertical 2s linear 0s infinite alternate;
+    animation: dvd-bounce-horizontal 3.5s linear 0s infinite alternate, dvd-bounce-vertical 2s linear 0s infinite alternate;
+  }
+}
+@media screen and (orientation: portrait) {
+  .dvd-logo {
+    -webkit-animation: dvd-bounce-horizontal 2s linear 0s infinite alternate, dvd-bounce-vertical 3.5s linear 0s infinite alternate;
+    animation: dvd-bounce-horizontal 2s linear 0s infinite alternate, dvd-bounce-vertical 3.5s linear 0s infinite alternate;
+  }
+}
+
+@keyframes dvd-bounce-horizontal {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100vw - 200px);
+  }
+}
+@keyframes dvd-bounce-vertical {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(100vh - 101.875px);
+  }
+}
+
+/*# sourceMappingURL=dvd-screensaver.css.map */

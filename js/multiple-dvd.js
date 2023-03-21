@@ -42,6 +42,14 @@ addAnimation(document.getElementById(`dvd-logo`))
 
 // Creating listener for adding new logos
 document.getElementById("dvd-add").addEventListener('click', ()=>{
+
+    document.getElementById("dvd-remove").style.display = "block"
+
+    const dvd_logos = document.getElementsByClassName('dvd-logo')
+    if (dvd_logos.length === 6){
+        document.getElementById("dvd-add").style.display = "none"
+    }
+
     let dvd_logo = document.createElement("img");
 
     dvd_logo.src = "../img/dvd-logo.png"
@@ -52,6 +60,17 @@ document.getElementById("dvd-add").addEventListener('click', ()=>{
     dvd_logo = addAnimation(dvd_logo)
 
     document.getElementById("screen-wrapper").appendChild(dvd_logo)
+})
+
+// Creating listener for removing last logo
+document.getElementById("dvd-remove").addEventListener('click', ()=>{
+    const dvd_logos = document.getElementsByClassName('dvd-logo')
+
+    document.getElementById("dvd-add").style.display = "block"
+    if (dvd_logos.length === 2){
+        document.getElementById("dvd-remove").style.display = "none"
+    }
+    dvd_logos.item(document.getElementsByClassName('dvd-logo').length-1).remove()
 })
 
 // Remove warning message by click

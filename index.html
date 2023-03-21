@@ -46,6 +46,12 @@
     <link href="css/null.css" rel="stylesheet" type="text/css">
     <link href="css/dvd-screensaver.css" rel="stylesheet" type="text/css">
 
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
     <title>Quantori Homework #2</title>
 </head>
 
@@ -54,18 +60,15 @@
 <div class="screen-wrapper">
 
     <div class="dvd-wrapper">
-        <img class="dvd-logo" src="img/dvd-logo.png" alt="dvd logo"/>
+        <img class="dvd-logo" id="dvd-logo-1" src="img/dvd-logo.png" alt="dvd logo"/>
     </div>
 
-    <audio autoplay hidden loop controls class="dvd-audio" >
-        <source src="sound/laser-delay2.mp3" type="audio/mp3"/>
-    </audio>
-
-    <audio autoplay hidden loop controls class="dvd-audio" >
-        <source src="sound/laser-delay35.mp3" type="audio/mp3"/>
-    </audio>
+    <h1 id="warning-text">
+        Click / tap anywhere </br>to allow sound
+    </h1>
 
 </div>
 
+<script src="js/laser.js"></script>
 </body>
 </html>

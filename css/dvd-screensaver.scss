@@ -4,29 +4,7 @@ $dvd-width: $start-width + px;
 $dvd-height: ($start-width*1304/2560) + px;
 
 :root {
-  --red: invert(46%) sepia(61%) saturate(4458%) hue-rotate(337deg) brightness(96%) contrast(96%);
-  --pink: invert(30%) sepia(61%) saturate(1813%) hue-rotate(307deg) brightness(91%) contrast(95%);
-  --raspberry: invert(38%) sepia(33%) saturate(1085%) hue-rotate(261deg) brightness(88%) contrast(89%);
-  --strawberry: invert(61%) sepia(56%) saturate(1713%) hue-rotate(306deg) brightness(86%) contrast(92%);
-
-  --yellow: invert(71%) sepia(89%) saturate(798%) hue-rotate(1deg) brightness(107%) contrast(91%);
-  --lemon: invert(89%) sepia(43%) saturate(546%) hue-rotate(2deg) brightness(108%) contrast(95%);
-  --orange: invert(61%) sepia(99%) saturate(820%) hue-rotate(337deg) brightness(99%) contrast(93%);
-  --sand: invert(85%) sepia(88%) saturate(1194%) hue-rotate(316deg) brightness(100%) contrast(101%);
-
-  --blue: invert(52%) sepia(77%) saturate(5335%) hue-rotate(166deg) brightness(96%) contrast(91%);
   --violet: invert(32%) sepia(13%) saturate(1928%) hue-rotate(219deg) brightness(100%) contrast(86%);
-  --laguna: invert(56%) sepia(70%) saturate(1959%) hue-rotate(133deg) brightness(96%) contrast(101%);
-  --sea: invert(32%) sepia(6%) saturate(3653%) hue-rotate(170deg) brightness(93%) contrast(84%);
-
-  --salad: invert(86%) sepia(10%) saturate(2726%) hue-rotate(33deg) brightness(86%) contrast(86%);
-  --emerald: invert(46%) sepia(95%) saturate(364%) hue-rotate(100deg) brightness(99%) contrast(87%);
-  --marine: invert(29%) sepia(31%) saturate(2216%) hue-rotate(151deg) brightness(96%) contrast(101%);
-  --swamp: invert(29%) sepia(89%) saturate(1278%) hue-rotate(135deg) brightness(90%) contrast(105%);
-
-  --bone: invert(94%) sepia(13%) saturate(944%) hue-rotate(317deg) brightness(104%) contrast(102%);
-  --silver: invert(71%) sepia(13%) saturate(335%) hue-rotate(176deg) brightness(94%) contrast(91%);
-
 }
 
 .screen-wrapper {
@@ -47,43 +25,12 @@ $dvd-height: ($start-width*1304/2560) + px;
   width: $dvd-width;
   height: $dvd-height;
 
-  @media screen and (orientation: landscape) {
-    -webkit-animation: dvd-bounce-horizontal 3.5s linear 0s infinite alternate,
-    dvd-bounce-vertical 2s linear 0s infinite alternate,
-    dvd-color-vertical 32s step-start 0s infinite;
-
-
-    animation: dvd-bounce-horizontal 3.5s linear 0s infinite alternate,
-    dvd-bounce-vertical 2s linear 0s infinite alternate,
-    dvd-color-vertical 32s step-start 0s infinite;
-  }
-
-  @media screen and (orientation: portrait) {
-    -webkit-animation: dvd-bounce-horizontal 2s linear 0s infinite alternate,
-    dvd-bounce-vertical 3.5s linear 0s infinite alternate,
-    dvd-color-vertical 56s step-end 0s infinite;
-
-
-    animation: dvd-bounce-horizontal 2s linear 0s infinite alternate,
-    dvd-bounce-vertical 3.5s linear 0s infinite alternate,
-    dvd-color-vertical 56s step-start 0s infinite;
-
-  }
+  filter: var(--violet);
 }
 
 .dvd-wrapper {
   width: $dvd-width;
   height: $dvd-height;
-
-  @media screen and (orientation: landscape) {
-    -webkit-animation: dvd-color-horizontal 7s steps(2, jump-both) 0s infinite;
-    animation: dvd-color-horizontal 7s steps(2, jump-both) 0s infinite;
-  }
-
-  @media screen and (orientation: portrait) {
-    -webkit-animation: dvd-color-horizontal 4s steps(2, jump-both) 0s infinite;
-    animation: dvd-color-horizontal 4s steps(2, jump-both) 0s infinite;
-  }
 }
 
 // Horizontal movement
@@ -106,86 +53,40 @@ $dvd-height: ($start-width*1304/2560) + px;
   }
 }
 
-
-// Horizontal color change
-@keyframes dvd-color-horizontal {
-  from {
-    filter: invert(100%)
-  }
-  to {
-    filter: invert(0%)
-  }
-}
-
-// Vertical color change
-@keyframes dvd-color-vertical {
-  6.25%{
-    filter: var(--blue);
-  }
-  12.5% {
-    filter: var(--pink);
-  }
-  18.75%{
-    filter: var(--lemon);
-  }
-  25% {
-    filter: var(--strawberry);
-  }
-  31.25%{
-    filter: var(--emerald);
-  }
-  37.5% {
-    filter: var(--salad);
-  }
-  43.75%{
-    filter: var(--slver);
-  }
-  50% {
-    filter: var(--yellow);
-  }
-  56.25%{
-    filter: var(--marine);
-  }
-  62.5% {
-    filter: var(--swamp);
-  }
-  68.75%{
-    filter: var(--orange);
-  }
-  75% {
-    filter: var(--sea);
-  }
-  81.25%{
-    filter: var(--raspberry);
-  }
-  87.5% {
-    filter: var(--sand);
-  }
-  93.75%{
-    filter: var(--laguna);
-  }
-  100% {
-    filter: var(--violet);
-  }
-}
-
-#warning-text{
+#warning-text {
   position: absolute;
+
   top: 50%;
   left: 50%;
-  opacity: 0.4;
   text-align: center;
+
   color: #FFFFFF;
   font-size: 50px;
   font-weight: 900;
-  -webkit-user-select:none;
-  -moz-user-select:none;
-  user-select:none;
   text-transform: uppercase;
 
+  opacity: 0.4;
 
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 
   cursor: default;
 
   transform: translate(-50%, -50%);
+}
+
+#dvd-add {
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+  right: 10px;
+
+  color: #FFFFFF;
+  opacity: 0.6;
+
+  font-size: 30px;
+  font-weight: 300;
 }

@@ -168,3 +168,24 @@ $dvd-height: ($start-width*1304/2560) + px;
     filter: var(--violet);
   }
 }
+
+#warning-text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.4;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 900;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
+  text-transform: uppercase;
+
+
+
+  cursor: default;
+
+  transform: translate(-50%, -50%);
+}

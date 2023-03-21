@@ -16,6 +16,9 @@
   width: 200px;
   height: 101.875px;
   filter: var(--violet);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .dvd-wrapper {
@@ -65,6 +68,24 @@
   opacity: 0.6;
   font-size: 30px;
   font-weight: 300;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#dvd-remove {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  top: 0;
+  right: 40px;
+  color: #FFFFFF;
+  opacity: 0.6;
+  font-size: 30px;
+  font-weight: 300;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 /*# sourceMappingURL=dvd-screensaver.css.map */

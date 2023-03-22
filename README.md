@@ -10,7 +10,7 @@
 
 ---
 
-**2D Screensaver Static:** <a href="/https://quantori-hw2-feature-2d-screensaver.netlify.app" target="_blank">Open page</a>
+**2D Screensaver Static:** <a href="https://quantori-hw2-feature-2d-screensaver.netlify.app" target="_blank">Open page</a>
 
 **Description:** *Classic DVD logo animation using pure HTML/CSS*
 

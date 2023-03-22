@@ -1,0 +1,42 @@
+.dvd-logo{
+  position: absolute;
+  transform-style: preserve-3d;
+
+  width: 50px;
+
+  filter: invert(61%) sepia(99%) saturate(820%) hue-rotate(337deg) brightness(99%) contrast(93%);
+
+  animation:
+          dvd-bounce-z 5s linear 0s infinite alternate,
+          dvd-bounce-x 2s linear 0s infinite alternate,
+          dvd-bounce-y 3s linear 0s infinite alternate;
+
+}
+
+
+@keyframes dvd-bounce-z {
+  from{
+    transform: translateZ(-30px) translateX(50px) translateY(-30px);
+  }
+  to{
+    transform: translateZ(150px) translateX(50px) translateY(-30px);
+  }
+}
+
+@keyframes dvd-bounce-x {
+  from{
+    top: 130px
+  }
+  to{
+    top: 300px
+  }
+}
+
+@keyframes dvd-bounce-y {
+  from{
+    left: 0;
+  }
+  to{
+    left: 150px;
+  }
+}

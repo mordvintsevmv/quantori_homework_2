@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width initial-scale=1"/>
     <meta
             name="description"
             content="Quantori Homework #2 by Maksim Mordvintsev. Screensaver effect of an old DVD player using HTML and CSS (and a little bit JS)."
@@ -44,10 +44,28 @@
     <!--STYLES-->
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/null.css" rel="stylesheet" type="text/css">
+    <link href="css/dvd-screensaver.css" rel="stylesheet" type="text/css">
 
     <title>Quantori Homework #2</title>
 </head>
+
 <body>
+
+<div class="screen-wrapper">
+
+    <div class="dvd-wrapper">
+        <img class="dvd-logo" src="img/dvd-logo.png" alt="dvd logo"/>
+    </div>
+
+    <audio autoplay hidden loop controls class="dvd-audio" >
+        <source src="sound/laser-delay2.mp3" type="audio/mp3"/>
+    </audio>
+
+    <audio autoplay hidden loop controls class="dvd-audio" >
+        <source src="sound/laser-delay35.mp3" type="audio/mp3"/>
+    </audio>
+
+</div>
 
 </body>
 </html>

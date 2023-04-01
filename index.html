@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="viewport" content="width=device-width initial-scale=1"/>
     <meta
             name="description"
             content="Quantori Homework #2 by Maksim Mordvintsev. Screensaver effect of an old DVD player using HTML and CSS (and a little bit JS)."
@@ -44,10 +44,34 @@
     <!--STYLES-->
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <link href="css/null.css" rel="stylesheet" type="text/css">
+    <link href="css/dvd-screensaver.css" rel="stylesheet" type="text/css">
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+
 
     <title>Quantori Homework #2</title>
+
 </head>
+
 <body>
 
+<div class="screen-wrapper" id="screen-wrapper">
+
+    <img class="dvd-logo" id="dvd-logo" src="img/dvd-logo.png" alt="dvd logo"/>
+
+    <div id="dvd-add">+</div>
+    <div id="dvd-remove">-</div>
+
+    <h1 id="warning-text">Click / tap anywhere <br>to allow sound</h1>
+
+    <div id="help-text">Here you can add or remove dvd logos</div>
+
+</div>
+
+<script src="js/multiple-dvd.js"></script>
 </body>
 </html>

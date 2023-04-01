@@ -1,0 +1,149 @@
+$start-width: 200;
+
+$dvd-width: $start-width + px;
+$dvd-height: ($start-width*1304/2560) + px;
+
+:root {
+  --violet: invert(32%) sepia(13%) saturate(1928%) hue-rotate(219deg) brightness(100%) contrast(86%);
+}
+
+.screen-wrapper {
+  position: relative;
+
+  margin: 0;
+  padding: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #111;
+}
+
+.dvd-logo {
+  position: absolute;
+
+  width: $dvd-width;
+  height: $dvd-height;
+
+  filter: var(--violet);
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.dvd-wrapper {
+  width: $dvd-width;
+  height: $dvd-height;
+}
+
+// Horizontal movement
+@keyframes dvd-bounce-horizontal {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100vw - $dvd-width);
+  }
+}
+
+// Vertical movement
+@keyframes dvd-bounce-vertical {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: calc(100vh - $dvd-height);
+  }
+}
+
+#warning-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  text-align: center;
+
+  color: #FFFFFF;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  opacity: 0.2;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  cursor: default;
+
+  transform: translate(-50%, -50%);
+}
+
+#dvd-add {
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+  right: 60px;
+
+  color: #FFFFFF;
+  opacity: 0.6;
+
+  font-size: 30px;
+  font-weight: 300;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#dvd-remove {
+  position: absolute;
+  display: none;
+
+  cursor: pointer;
+
+  top: 0;
+  right: 90px;
+
+  color: #FFFFFF;
+  opacity: 0.6;
+
+  font-size: 30px;
+  font-weight: 300;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+#help-text {
+  position: absolute;
+
+  height: 55px;
+  width: 150px;
+
+  padding: 5px;
+
+  background: #383F42;
+  border-radius: 15px;
+
+  top: 40px;
+  right: 10px;
+
+  color: #FFFFFF;
+  opacity: 0.4;
+
+  font-size: 15px;
+  font-weight: 300;
+
+  text-align: center;
+
+  transition: opacity 0.5s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}

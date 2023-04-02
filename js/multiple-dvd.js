@@ -56,7 +56,7 @@ document.getElementById("dvd-add").addEventListener('click', () => {
     // Creating new logo
     let dvd_logo = document.createElement("img");
 
-    dvd_logo.src = "../img/dvd-logo.png"
+    dvd_logo.src = "img/dvd-logo.png"
     dvd_logo.className = "dvd-logo";
     dvd_logo.style.filter = createRandomFilter();
     dvd_logo.alt = "dvd logo"
